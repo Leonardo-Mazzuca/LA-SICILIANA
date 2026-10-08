@@ -8,7 +8,7 @@ export const restaurant = {
   instagramUrl: 'https://www.instagram.com/lasiciliana25/',
   instagramHandle: '@lasiciliana25',
   mapsUrl:
-    'https://www.google.com/maps/search/?api=1&query=La%20Siciliana%20Pasticceria%20Rua%20Itaipu%20500',
+    'https://www.google.com/maps/place/La+Siciliana+Pasticceria/@-23.613283,-46.6431833,17z/data=!4m6!3m5!1s0x23a42527ce6e41fb:0x637a20fef00cce9c!8m2!3d-23.613283!4d-46.6431833!16s%2Fg%2F11wwwbtyy9',
   portionNote: 'Massas 500 g / Molhos 500 g / Antepastos 200 g',
 } as const
 
@@ -75,6 +75,7 @@ export const navItems = [
   { href: '#inicio', label: 'Início' },
   { href: '#cardapio', label: 'Cardápio' },
   { href: '#sobre', label: 'Sobre' },
+  { href: '#avaliacoes', label: 'Avaliações' },
   { href: '#galeria', label: 'Galeria' },
   { href: '#contato', label: 'Contato' },
 ] as const

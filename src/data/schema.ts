@@ -1,4 +1,5 @@
 import { categories } from './menu'
+import { googleRating, reviews } from './reviews'
 import { hours, restaurant } from './restaurant'
 
 const schemaDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -18,7 +19,24 @@ export function buildSchema() {
       streetAddress: restaurant.address,
       addressCountry: 'BR',
     },
-    sameAs: [restaurant.instagramUrl],
+    sameAs: [restaurant.instagramUrl, restaurant.mapsUrl],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: String(googleRating.count),
+      bestRating: '5',
+    },
+    review: reviews.map((review) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: review.name },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: String(review.rating),
+        bestRating: '5',
+      },
+      reviewBody: review.text,
+      publisher: { '@type': 'Organization', name: 'Google' },
+    })),
     openingHoursSpecification: hours
       .filter((entry) => entry.opens && entry.closes)
       .map((entry) => ({

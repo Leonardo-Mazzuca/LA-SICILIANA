@@ -9,6 +9,7 @@ import { Highlights } from './components/Highlights'
 import { Menu } from './components/Menu'
 import { MobileBar } from './components/MobileBar'
 import { Navbar } from './components/Navbar'
+import { Reviews } from './components/Reviews'
 import { buildSchema } from './data/schema'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
         <Highlights />
         <Menu />
         <About />
+        <Reviews />
         <Gallery />
         <CTA />
         <Contact />

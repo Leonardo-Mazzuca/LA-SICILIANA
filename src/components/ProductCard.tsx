@@ -1,4 +1,3 @@
-import { restaurant } from '@/data/restaurant'
 import { formatPrice, type MenuItem } from '@/data/menu'
 import { cn } from '@/lib/utils'
 
@@ -33,17 +32,10 @@ export function ProductCard({ item, category, featured = false }: ProductCardPro
         <p className="text-xs font-medium uppercase tracking-[0.18em] text-gold">{category}</p>
         <h3 className="mt-2 font-serif text-3xl leading-none text-ink">{item.name}</h3>
         {item.description ? <p className="mt-3 text-sm leading-relaxed text-mute">{item.description}</p> : null}
-        <p className="mt-4 font-serif text-2xl text-ink">
+        <p className="mt-auto pt-4 font-serif text-2xl text-ink">
           {formatPrice(item.price)}
           {item.note ? <span className="ml-2 font-sans text-sm text-mute">{item.note}</span> : null}
         </p>
-        <a
-          href={restaurant.phoneHref}
-          className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-full bg-brand text-sm font-medium text-white transition-colors hover:bg-brand-dark"
-          aria-label={`Pedir ${item.name} por telefone`}
-        >
-          Pedir
-        </a>
       </div>
     </article>
   )
