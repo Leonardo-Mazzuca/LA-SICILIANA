@@ -4,7 +4,7 @@ import { BackgroundGradient } from './ui/background-gradient'
 import { Spotlight } from './ui/spotlight'
 import { TextGenerateEffect } from './ui/text-generate-effect'
 import { ButtonLink } from './ui/button'
-import canolli from '../../imgs/canole.jpeg'
+import canolli from '../../imgs/canole-main.jpeg'
 
 function useDesktopMotion() {
   const [enabled, setEnabled] = useState(false)
@@ -52,12 +52,12 @@ export function Hero() {
           <BackgroundGradient animate={animateFrame} className="overflow-hidden rounded-[1.55rem] bg-paper">
             <img
               src={canolli}
-              alt="Canollis com creme e açúcar de confeiteiro"
-              width={1080}
-              height={1080}
+              alt="Dois canollis com creme e açúcar de confeiteiro, no prato"
+              width={903}
+              height={1599}
               fetchPriority="high"
               decoding="async"
-              className="aspect-[4/3] w-full object-cover lg:aspect-[4/5]"
+              className="aspect-[4/3] w-full object-cover object-[center_62%] lg:aspect-[4/5]"
             />
           </BackgroundGradient>
           <figcaption className="mt-3 text-sm text-mute">Canolli · R$ 11,90</figcaption>

@@ -13,9 +13,9 @@ export function Gallery() {
             id="galeria-titulo"
           />
         </Reveal>
-        <div className="mt-12 columns-1 gap-4 sm:columns-2 lg:columns-3">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4">
           {galleryImages.map((image) => (
-            <figure key={image.alt} className="mb-4 break-inside-avoid">
+            <figure key={image.alt} className="min-w-0">
               <div className="overflow-hidden rounded-3xl bg-paper shadow-card">
                 <img
                   src={image.src}
@@ -24,7 +24,7 @@ export function Gallery() {
                   height={image.height}
                   loading="lazy"
                   decoding="async"
-                  className="w-full object-cover transition-transform duration-500 ease-out hover:scale-[1.03]"
+                  className="aspect-[3/4] w-full object-cover transition-transform duration-500 ease-out hover:scale-[1.03]"
                 />
               </div>
             </figure>

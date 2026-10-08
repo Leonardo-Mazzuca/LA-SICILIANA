@@ -1,4 +1,4 @@
-import canolliClose from '../../imgs/canole-2.jpeg'
+import canolliClose from '../../imgs/canole-3.jpeg'
 import breads from '../../imgs/paes.jpeg'
 import fried from '../assets/frito.jpg'
 import rings from '../../imgs/rosquinha.jpeg'
@@ -14,8 +14,8 @@ export const aboutImage = {
 export const galleryImages = [
   {
     src: canolliClose,
-    alt: 'Canolli com creme, cereja e açúcar de confeiteiro',
-    width: 720,
+    alt: 'Canollis com creme, amêndoas e granulado, na caixa',
+    width: 991,
     height: 1600,
   },
   {

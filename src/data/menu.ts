@@ -1,4 +1,4 @@
-import canolliImage from '../../imgs/canole.jpeg'
+import canolliImage from '../../imgs/canole-3.jpeg'
 import strudelImage from '../../imgs/shawarma.jpeg'
 import tiramisuImage from '../assets/tiramisu.jpg'
 import pastieraImage from '../../imgs/torta.jpeg'
@@ -27,7 +27,7 @@ const canolli: MenuItem = {
   price: '11,90',
   description: 'Massa frita com creme e açúcar de confeiteiro.',
   image: canolliImage,
-  imageAlt: 'Dois canollis com creme e açúcar de confeiteiro',
+  imageAlt: 'Canollis com creme, amêndoas e granulado, na caixa',
 }
 
 const strudel: MenuItem = {

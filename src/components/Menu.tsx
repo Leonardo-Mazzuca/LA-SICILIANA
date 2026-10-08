@@ -78,7 +78,7 @@ export function Menu() {
           </div>
         </nav>
 
-        <div className="mt-10 grid gap-x-16 gap-y-14 lg:grid-cols-2">
+        <div className="mx-auto mt-10 flex w-full max-w-3xl flex-col gap-14">
           {categories.map((category) => (
             <div key={category.id} id={category.id} className="scroll-mt-28">
               <h3 className="font-serif text-3xl text-ink">{category.title}</h3>
@@ -86,13 +86,13 @@ export function Menu() {
                 {category.items.map((item) => (
                   <li
                     key={item.id}
-                    className="flex items-baseline justify-between gap-4 border-b border-line py-3.5"
+                    className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-6 border-b border-line py-3.5"
                   >
                     <span className="text-base text-ink">
                       {item.name}
                       {item.note ? <span className="text-mute"> · {item.note}</span> : null}
                     </span>
-                    <span className="shrink-0 whitespace-nowrap font-medium tabular-nums text-ink">
+                    <span className="whitespace-nowrap text-right font-medium tabular-nums text-ink">
                       {formatPrice(item.price)}
                     </span>
                   </li>
@@ -102,7 +102,7 @@ export function Menu() {
           ))}
         </div>
 
-        <p className="mt-8 text-sm text-mute">{restaurant.portionNote}</p>
+        <p className="mx-auto mt-8 w-full max-w-3xl text-sm text-mute">{restaurant.portionNote}</p>
       </div>
 
       {open ? (
