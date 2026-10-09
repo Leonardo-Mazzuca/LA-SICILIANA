@@ -4,6 +4,7 @@ export const restaurant = {
   phoneDisplay: '(11) 93483-3571',
   phoneHref: 'tel:+5511934833571',
   phoneSchema: '+55-11-93483-3571',
+  whatsappUrl: 'https://wa.me/5511934833571',
   address: 'Rua Itaipu 500',
   instagramUrl: 'https://www.instagram.com/lasiciliana25/',
   instagramHandle: '@lasiciliana25',

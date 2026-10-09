@@ -63,11 +63,14 @@ export function Contact() {
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ButtonLink href={restaurant.phoneHref}>Ligar</ButtonLink>
-            <ButtonLink href={restaurant.mapsUrl} variant="secondary" external>
-              Como chegar
+            <ButtonLink href={restaurant.whatsappUrl} variant="secondary" external>
+              WhatsApp
             </ButtonLink>
             <ButtonLink href={restaurant.instagramUrl} variant="secondary" external>
               Instagram
+            </ButtonLink>
+            <ButtonLink href={restaurant.mapsUrl} variant="secondary" external>
+              Como chegar
             </ButtonLink>
           </div>
         </Reveal>
