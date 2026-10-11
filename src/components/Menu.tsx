@@ -84,17 +84,26 @@ export function Menu() {
               <h3 className="font-serif text-3xl text-ink">{category.title}</h3>
               <ul className="mt-4">
                 {category.items.map((item) => (
-                  <li
-                    key={item.id}
-                    className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-6 border-b border-line py-3.5"
-                  >
-                    <span className="text-base text-ink">
-                      {item.name}
-                      {item.note ? <span className="text-mute"> · {item.note}</span> : null}
-                    </span>
-                    <span className="whitespace-nowrap text-right font-medium tabular-nums text-ink">
-                      {formatPrice(item.price)}
-                    </span>
+                  <li key={item.id} className="border-b border-line py-3.5">
+                    <div className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-6">
+                      <span className="text-base text-ink">
+                        {item.name}
+                        {item.note ? <span className="text-mute"> · {item.note}</span> : null}
+                      </span>
+                      <span className="whitespace-nowrap text-right font-medium tabular-nums text-ink">
+                        {formatPrice(item.price)}
+                      </span>
+                    </div>
+                    {item.flavors?.length ? (
+                      <ul className="mt-2 grid gap-1 text-sm text-mute">
+                        {item.flavors.map((flavor) => (
+                          <li key={flavor.name}>
+                            {flavor.name}
+                            {flavor.note ? ` · ${flavor.note}` : ''}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </li>
                 ))}
               </ul>

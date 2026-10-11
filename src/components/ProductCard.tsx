@@ -32,6 +32,19 @@ export function ProductCard({ item, category, featured = false }: ProductCardPro
         <p className="text-xs font-medium uppercase tracking-[0.18em] text-gold">{category}</p>
         <h3 className="mt-2 font-serif text-3xl leading-none text-ink">{item.name}</h3>
         {item.description ? <p className="mt-3 text-sm leading-relaxed text-mute">{item.description}</p> : null}
+        {item.flavors?.length ? (
+          <div className="mt-4">
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-gold">Sabores</p>
+            <ul className={cn('mt-2 grid gap-1.5 text-sm text-ink', featured && 'sm:grid-cols-2 sm:gap-x-8')}>
+              {item.flavors.map((flavor) => (
+                <li key={flavor.name}>
+                  {flavor.name}
+                  {flavor.note ? <span className="text-mute"> · {flavor.note}</span> : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         <p className="mt-auto pt-4 font-serif text-2xl text-ink">
           {formatPrice(item.price)}
           {item.note ? <span className="ml-2 font-sans text-sm text-mute">{item.note}</span> : null}

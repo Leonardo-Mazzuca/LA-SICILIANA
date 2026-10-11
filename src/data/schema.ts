@@ -55,8 +55,20 @@ export function buildSchema() {
         hasMenuItem: category.items.map((item) => ({
           '@type': 'MenuItem',
           name: item.name,
-          ...(item.description || item.note
-            ? { description: [item.note, item.description].filter(Boolean).join('. ') }
+          ...(item.description || item.note || item.flavors?.length
+            ? {
+                description: [
+                  item.note,
+                  item.description,
+                  item.flavors?.length
+                    ? `Sabores: ${item.flavors
+                        .map((flavor) => (flavor.note ? `${flavor.name} (${flavor.note})` : flavor.name))
+                        .join(', ')}`
+                    : '',
+                ]
+                  .filter(Boolean)
+                  .join('. '),
+              }
             : {}),
           offers: {
             '@type': 'Offer',

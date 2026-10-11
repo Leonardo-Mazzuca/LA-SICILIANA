@@ -5,12 +5,18 @@ import pastieraImage from '../../imgs/torta.jpeg'
 import caponataImage from '../assets/caponata.jpg'
 import menuScan from '../../imgs/cardapio.jpeg'
 
+export type MenuFlavor = {
+  name: string
+  note?: string
+}
+
 export type MenuItem = {
   id: string
   name: string
   price: string
   note?: string
   description?: string
+  flavors?: MenuFlavor[]
   image?: string
   imageAlt?: string
 }
@@ -26,6 +32,14 @@ const canolli: MenuItem = {
   name: 'Canolli',
   price: '11,90',
   description: 'Massa frita com creme e açúcar de confeiteiro.',
+  flavors: [
+    { name: 'Ricota com Frutas Cristalizadas' },
+    { name: 'Creme de Limão Siciliano' },
+    { name: 'Creme de Avelã' },
+    { name: 'Creme de Café' },
+    { name: 'Doce de Leite' },
+    { name: 'Sabor do mês', note: 'A cada mês um sabor diferente' },
+  ],
   image: canolliImage,
   imageAlt: 'Canollis com creme, amêndoas e granulado, na caixa',
 }
